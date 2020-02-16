@@ -1,0 +1,145 @@
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+#cruk-logo {
+    max-height: 15vh;
+    max-width: 40vw;
+}
+
+#main-header-div {
+    background-image: url(img/band-darkened-compressed.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.text-shadow {
+    text-shadow: -1px -1px #333;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.btn-facebook:hover {
+    background-color: #2d4373;
+    border-color: rgba(0,0,0,0.2);
+}
+
+.jumbotron {
+    background-color: transparent;
+    color: floralwhite;
+}
+
+.jumbotron p {
+    font-size: 20pt
+}
+
+.parallax-window {
+    min-height: 75vh;
+    background-size: cover;
+}
+
+.video-container {
+    position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    padding-bottom: 25px;
+}
+
+.margin-top {
+    margin-top: auto;
+}
+
+.row p {
+    text-align: justify;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.footer {
+    padding-top: 25px;
+}
+
+.footer img {
+    max-height: 120px;
+    max-width: 100vw;
+}
+
+.footer p {
+    padding-top: 5px;
+    margin: auto;
+    font-size: 10pt;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+#contactModal .contact-icon-container {
+    width: 2rem;
+    text-align: center;
+    float: left;
+    vertical-align: top;
+    padding-top: .375rem;
+}
+
+#contactModal .contact-input-container {
+    overflow: hidden;
+    position: relative;
+}
+
+#contactModal .validation-icon {
+    display: none;
+    float: right;
+    position: absolute;
+    right: 1rem;
+    top: .5rem;
+    z-index: 2;
+}
+
+#contactModal i {
+    font-size: 1.5rem;
+}
+
+#contactModal .g-recaptcha {
+    float: right;
+}
+
+#contactModal textarea {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: .375rem .75rem;
+    min-height: 8rem;
+    width: 100%;
+    text-align: left;
+}
+
+#contactModal .md-form {
+    padding: 0.2rem 0;
+    overflow: hidden;
+}
+
+#contactModal input[type=text] {
+    padding: .375rem 3rem .375rem .75rem;
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
