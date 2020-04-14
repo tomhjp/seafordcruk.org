@@ -143,3 +143,9 @@ html {
 .red-text {
     color: red;
 }
+
+.special-input-div {
+    /* Honey pot fields */
+    position:absolute;
+    left:50000px;
+}

@@ -1,11 +1,20 @@
 $(function()
 {
+    var start = Date.now()
+
     // For some reason, redirects don't always seem to clear the form...
     $('.text-input').each(function() {this.value=""});
 
     var contactName = $('#contact-name');
     var contactEmail = $('#contact-email');
     var contactMessage = $('#contact-message');
+    var submitButton = $('#contact-form-submit');
+    submitButton.prop('disabled', true);
+
+    $('#contact-form').submit(function() {
+        $('#time-input').val(Date.now() - start);
+    })
+
     function lengthNotExcessive(val) {
         return val.length < 10000;
     }
@@ -21,15 +30,13 @@ $(function()
         return lengthNotExcessive(contactMessage.val());
     }
     function updateSubmitButton() {
-        if(contactNameValid() && contactEmailValid() && contactMessageValid()) {
-            submitInputs.prop('disabled', false);
+        if (contactNameValid() && contactEmailValid() && contactMessageValid()) {
+            submitButton.prop('disabled', false);
         }
         else {
-            submitInputs.prop('disabled', true);
+            submitButton.prop('disabled', true);
         }
     }
-    var submitInputs = $('input[type="submit"]');
-    submitInputs.prop('disabled', true);
 
     var contactNameCheck = $('#contact-name-check');
     var contactNameTimes = $('#contact-name-times');

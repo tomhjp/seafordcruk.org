@@ -90,19 +90,19 @@
         </noscript>
         
         <!-- Outbeat Video -->
-        <div class="container">
+        <!--<div class="container">
             <h1 class="display-3">Outbeat are back!</h1>
             <div class="video-container">
                 <iframe width="560" height="349" src="https://www.youtube.com/embed/JnregF68Pr8?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div>
-        </div>
+        </div>-->
         
         <!-- Parallax Raffle -->
-        <div class="parallax-window js-only" data-parallax="scroll" data-image-src="static/img/raffle-compressed.jpg">
+        <!--<div class="parallax-window js-only" data-parallax="scroll" data-image-src="static/img/raffle-compressed.jpg">
         </div>
         <noscript>
             <div class="parallax-window" style="background-image: url(static/img/raffle-compressed.jpg)"></div>
-        </noscript>
+        </noscript>-->
         
         <!-- Info Committee -->
         <div class="container">
@@ -128,7 +128,7 @@
                 <div class="col-md-6">
                     <h2>How to get involved</h2>
                     <p>We are always looking for new members and opportunities. Please do get in touch if you are interested in raising money for Cancer Research, whether on a one-off or regular basis, or indeed if you are interested in joining the committee!</p>
-                    <!--<p><a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#contactModal">Contact us &raquo;</a></p>-->
+                    <p><a class="btn btn-secondary" href="#" role="button" data-toggle="modal" data-target="#contactModal">Contact us &raquo;</a></p>
                 </div>
             </div>
             <div class="row">
@@ -175,7 +175,7 @@
         <!-- Modal contact form -->
         <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
-                <form action="" method="post" id="contact-form">
+                <form action="https://q1vhb9z3ga.execute-api.eu-west-1.amazonaws.com/contact-us" method="post" id="contact-form">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="contactModalLabel">Contact us</h5>
@@ -192,7 +192,7 @@
                                 <div class="contact-input-container">
                                     <i id="contact-name-check" class="fa fa-check green-text validation-icon"></i>
                                     <i id="contact-name-times" class="fa fa-times red-text validation-icon"></i>
-                                    <input type="text" placeholder="Your name" id="contact-name" />
+                                    <input name="name" type="text" placeholder="Your name" id="contact-name" class="text-input" />
                                 </div>
                             </div>
 
@@ -203,7 +203,7 @@
                                 <div class="contact-input-container">
                                     <i id="contact-email-check" class="fa fa-check green-text validation-icon"></i>
                                     <i id="contact-email-times" class="fa fa-times red-text validation-icon"></i>
-                                    <input type="text" placeholder="Your email" id="contact-email" />
+                                    <input name="email" type="text" placeholder="Your email" id="contact-email" class="text-input" />
                                 </div>
                             </div>
 
@@ -212,13 +212,23 @@
                                     <i class="fa fa-pencil prefix grey-text"></i>
                                 </div>
                                 <div class="contact-input-container">
-                                    <textarea placeholder="Your message" id="contact-message"></textarea>
+                                    <textarea name="message" placeholder="Your message" id="contact-message" class="text-input"></textarea>
+                                </div>
+                            </div>
+                            <div class="md-form special-input-div">
+                                <div class="contact-input-container">
+                                    <input name="address" type="text" placeholder="Don't write anything here if you see this" id="address-input" class="text-input" />
+                                </div>
+                            </div>
+                            <div class="md-form special-input-div">
+                                <div class="contact-input-container">
+                                    <input name="time" type="text" placeholder="Don't write anything here if you see this" id="time-input" class="text-input" />
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" id="contact-form-submit">Send</button>
+                            <button type="submit" class="btn btn-primary" id="contact-form-submit">Send</button>
                         </div>
                     </div>
                 </form>
