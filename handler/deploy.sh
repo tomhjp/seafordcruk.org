@@ -12,6 +12,7 @@ else
 fi
 
 tag="$(date +"%Y-%m-%d-%H%M")-$(git rev-parse --short HEAD)"
+echo "${tag} selected as tag"
 git tag -a "${tag}" --message "Tagging ${tag} for deployment"
 git push
 terraform apply -var "tag=${tag}"
