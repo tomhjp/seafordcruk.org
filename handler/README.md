@@ -8,6 +8,6 @@ Run `make` in this directory and manually upload the zip to AWS lambda
 
 ## TODO
 
-[ ] Terraform AWS resources
-[ ] Terraform/aws CLI for updating the lambda function
+- [ ] Terraform AWS resources
+- [ ] Terraform/aws CLI for updating the lambda function
 

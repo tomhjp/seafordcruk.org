@@ -109,7 +109,8 @@ func handleRequest(ctx context.Context, req events.APIGatewayProxyRequest) (even
 	return events.APIGatewayProxyResponse{
 		StatusCode: 302,
 		Headers: map[string]string{
-			"location": "https://www.seafordcruk.org/",
+			// Send back to origin header to avoid crossing between apex, www and dev URLs
+			"location": req.Headers["origin"],
 		},
 	}, nil
 }
